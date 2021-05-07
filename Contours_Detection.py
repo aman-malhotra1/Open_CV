@@ -1,6 +1,3 @@
-# Contours are the boundries of the object . They are not same as edges
-# Contours are usefull in Shape Analysis
-
 import numpy as np
 import cv2
 
@@ -23,13 +20,8 @@ cv2.imshow('Canny_Edges',canny_image)
 
 # Contours
 contours , heirarchies = cv2.findContours(canny_image,mode=cv2.RETR_LIST,method=cv2.CHAIN_APPROX_SIMPLE)
-# RETR_EXTERNAL -> For External Lines
-# RETR_LIST -> For All Lines
-# RETR_TREE -> For Vertically Lines
 print('Total Contours Found : ', len(contours))
 
 cv2.drawContours(blank_image,contours,-1,(0,0,255),1) # -1 for all Lines
 cv2.imshow('Contour Image', blank_image)
 cv2.waitKey(0)
-
-# Four Steps are there -> GrayScale + Blur + Canny + Contour
