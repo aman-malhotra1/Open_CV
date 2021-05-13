@@ -13,7 +13,7 @@ cv2.imshow("Average_Blurred_1",average)
 
 
 # Gaussian Blurred
-gaussian = cv2.GaussianBlur(image,(5,5),0)  # Giving Weightage to each pixle and then multiplying each pixle with weightage value and then  multiply it
+gaussian = cv2.GaussianBlur(image,(5,5),0)  # Giving Weightage to each pixle and then multiplying each pixle value with weightage value and then average it
 cv2.imshow("Gaussian", gaussian)
 
 # Median Blurred
